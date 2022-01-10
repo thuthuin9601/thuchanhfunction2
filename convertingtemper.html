@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>C to F temperature converter</h2>
+    <input type="text" id="temper" placeholder="insert Celcius temperature">
+    <button onclick="display()">Convert</button>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function convert(C){
+        let F=C*1.8+32;
+        return F;
+    }
+    function display(){
+        let inputC=Number(document.getElementById('temper').value);
+        //let a=convert(inputC);
+        let result= inputC+' degree Celcius to '+convert(inputC)+' degree Farenheit';
+        document.getElementById('result').innerHTML=result;
+    }
+</script>
